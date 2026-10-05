@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraveBot - AI Food Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .ai-page {
+            padding: 60px 0;
+            min-height: 75vh;
+        }
+
+        .ai-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .ai-header h1 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .ai-header p {
+            color: #666;
+        }
+
+        .chat-box {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+
+        .chat-area {
+            height: 350px;
+            overflow-y: auto;
+            padding: 15px;
+            background: #f5f7fa;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            padding: 12px 16px;
+            margin: 10px 0;
+            border-radius: 12px;
+            max-width: 80%;
+        }
+
+        .bot-message {
+            background: #e8eef8;
+            color: #333;
+        }
+
+        .user-message {
+            background: #1e3c72;
+            color: white;
+            margin-left: auto;
+        }
+
+        .input-area {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-area input {
+            flex: 1;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .input-area button {
+            padding: 13px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #1e3c72;
+            color: white;
+            cursor: pointer;
+        }
+
+        .input-area button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="CraveCart Logo">
+            <h1>CraveCart</h1>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="delivery.html">Delivery</a></li>
+                <li><a href="ai-assistant.html" class="active">AI Assistant</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="ai-page">
+
+    <div class="container">
+
+        <div class="ai-header">
+            <h1>🤖 CraveBot</h1>
+            <p>Your AI Food Assistant</p>
+        </div>
+
+        <div class="chat-box">
+
+            <div class="chat-area" id="chatArea">
+
+                <div class="message bot-message">
+                    <strong>CraveBot:</strong><br>
+                    Hi! 👋 I'm CraveBot. Tell me what kind of food you're craving!
+                </div>
+
+            </div>
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Example: I want pizza..."
+                >
+
+                <button onclick="sendMessage()">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2025 CraveCart. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function sendMessage() {
+
+        const input = document.getElementById("userInput");
+        const chatArea = document.getElementById("chatArea");
+
+        const message = input.value.trim();
+
+        if (message === "") {
+            return;
+        }
+
+        // User message
+        chatArea.innerHTML += `
+            <div class="message user-message">
+                ${message}
+            </div>
+        `;
+
+        const text = message.toLowerCase();
+
+        let reply = "";
+
+        // Simple AI-style recommendations
+        if (text.includes("pizza")) {
+            reply = "🍕 I recommend our Margherita Pizza or Pepperoni Pizza!";
+        }
+        else if (text.includes("burger")) {
+            reply = "🍔 You can try our Cheeseburger or Chicken Burger!";
+        }
+        else if (text.includes("sandwich")) {
+            reply = "🥪 Our Club Sandwich and Veggie Sandwich are great choices!";
+        }
+        else if (text.includes("cheap") || text.includes("budget")) {
+            reply = "💰 Try our Veggie Sandwich at ₹7.99 or Club Sandwich at ₹8.99.";
+        }
+        else if (text.includes("hello") || text.includes("hi")) {
+            reply = "Hello! 👋 What would you like to eat today?";
+        }
+        else if (text.includes("recommend") || text.includes("suggest")) {
+            reply = "😋 I recommend trying our Margherita Pizza, Cheeseburger, or Club Sandwich!";
+        }
+        else {
+            reply = "😊 I can suggest Pizza, Burger, or Sandwich. Try asking: 'Suggest a pizza'.";
+        }
+
+        // Bot response
+        setTimeout(function() {
+
+            chatArea.innerHTML += `
+                <div class="message bot-message">
+                    <strong>CraveBot:</strong><br>
+                    ${reply}
+                </div>
+            `;
+
+            chatArea.scrollTop = chatArea.scrollHeight;
+
+        }, 500);
+
+        input.value = "";
+    }
+
+    // Enter key support
+    document.getElementById("userInput").addEventListener("keypress", function(event) {
+
+        if (event.key === "Enter") {
+            sendMessage();
+        }
+
+    });
+</script>
+
+</body>
+</html>

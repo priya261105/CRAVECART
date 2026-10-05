@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - CraveCart</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .gallery-page {
+            padding: 60px 0;
+            min-height: 70vh;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .gallery-header h1 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .gallery-header p {
+            color: #666;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .gallery-item h3 {
+            padding: 15px;
+            text-align: center;
+            color: #1e3c72;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="CraveCart Logo">
+            <h1>CraveCart</h1>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="gallery-page">
+    <div class="container">
+
+        <div class="gallery-header">
+            <h1>Food Gallery</h1>
+            <p>Explore some of our delicious food items.</p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="img/food/p1.jpg" alt="Pizza">
+                <h3>Margherita Pizza</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/category/pizza.jpg" alt="Pizza">
+                <h3>Pepperoni Pizza</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/food/b1.jpg" alt="Burger">
+                <h3>Cheeseburger</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/category/burger.jpg" alt="Burger">
+                <h3>Chicken Burger</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/food/s1.jpg" alt="Sandwich">
+                <h3>Club Sandwich</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/category/sandwich.jpg" alt="Sandwich">
+                <h3>Veggie Sandwich</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2025 CraveCart. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

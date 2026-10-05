@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CraveCart</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+
+            <div class="logo">
+                <img src="img/logo.png" alt="CraveCart Logo">
+                <h1>CraveCart</h1>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="menu.html">Menu</a>
+                    </li>
+
+                    <li>
+                        <a href="offers.html">Offers</a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+
+                    <li>
+                        <a href="reviews.html">Reviews</a>
+                    </li>
+
+                    <li>
+                        <a href="faq.html">FAQ</a>
+                    </li>
+
+                    <li>
+                        <a href="delivery.html">Delivery</a>
+                    </li>
+
+                    <li>
+                        <a href="ai-assistant.html">AI Assistant</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="active">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="cartLink">
+                            <i class="fas fa-shopping-cart"></i>
+                            Cart <span class="cart-count">0</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Contact Section -->
+    <section class="contact-page">
+
+        <div class="container">
+
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you!</p>
+            </div>
+
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn-primary">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+
+                <div class="about-content">
+
+                    <h2>Get In Touch</h2>
+
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        123 Food Street, Yummy City
+                    </p>
+
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        (123) 456-7890
+                    </p>
+
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        info@cravecart.com
+                    </p>
+
+
+                    <h2>Opening Hours</h2>
+
+                    <p>
+                        Monday - Friday: 10:00 AM - 10:00 PM
+                    </p>
+
+                    <p>
+                        Saturday - Sunday: 11:00 AM - 11:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+
+        <div class="cart-content">
+
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <span class="close-btn" id="closeCart">&times;</span>
+            </div>
+
+
+            <div class="cart-body">
+
+                <div id="cartItems">
+
+                    <!-- Cart items will be loaded here -->
+                    <p class="empty-cart-message">
+                        Your cart is empty
+                    </p>
+
+                </div>
+
+
+                <div class="cart-footer">
+
+                    <div class="cart-total">
+                        <h3>
+                            Total: ₹<span id="cartTotal">0.00</span>
+                        </h3>
+                    </div>
+
+                    <button
+                        class="btn-primary checkout-btn"
+                        id="checkoutBtn"
+                    >
+                        Checkout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+
+                <!-- Footer About -->
+                <div class="footer-section">
+
+                    <h3>CraveCart</h3>
+
+                    <p>
+                        Your Cravings, Our Passion — Since 2025
+                    </p>
+
+                </div>
+
+
+                <!-- Footer Quick Links -->
+                <div class="footer-section">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="menu.html">Menu</a>
+                        </li>
+
+                        <li>
+                            <a href="offers.html">Offers</a>
+                        </li>
+
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+
+                        <li>
+                            <a href="reviews.html">Reviews</a>
+                        </li>
+
+                        <li>
+                            <a href="faq.html">FAQ</a>
+                        </li>
+
+                        <li>
+                            <a href="delivery.html">Delivery</a>
+                        </li>
+
+                        <li>
+                            <a href="ai-assistant.html">AI Assistant</a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Footer Contact -->
+                <div class="footer-section">
+
+                    <h3>Contact Us</h3>
+
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        123 Food Street, Yummy City
+                    </p>
+
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        (123) 456-7890
+                    </p>
+
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        info@cravecart.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2025 CraveCart. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
